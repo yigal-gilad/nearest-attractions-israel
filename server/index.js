@@ -11,7 +11,7 @@ const env = require('./readenv');
 const Ddos = require('ddos');
 const ddos = new Ddos({ burst: parseInt(env.ddos_burst), limit: parseInt(env.ddos_limit) });
 const port = env.port;
-const request = require("request");
+// const request = require("request");
 if (env.node_env !== "production") {
   app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
